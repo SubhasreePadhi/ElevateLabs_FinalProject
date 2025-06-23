@@ -1,0 +1,20 @@
+const TRACKING_DOMAINS = [
+    "google-analytics.com",
+    "googletagmanager.com",
+    "doubleclick.net",
+    "facebook.com/tr", // Facebook Pixel
+    "analytics.twitter.com",
+    "ads.linkedin.com",
+    "pixel.adsafeprotected.com",
+    "ad.atdmt.com",
+    "matomo.org",
+    "criteo.com",
+    "hotjar.com",
+    "segment.io",
+    "mixpanel.com",
+    "newrelic.com",
+    "app.pendo.io",
+    "googlesyndication.com",
+    "adnxs.com",
+    "ampproject.net"
+];

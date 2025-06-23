@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Shield Options</title>
+    <link rel="stylesheet" href="css/options.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Privacy Shield Settings</h1>
+
+        <section class="card">
+            <h2>Add Custom Rule</h2>
+            <div class="form-group">
+                <input type="text" id="domainInput" placeholder="Enter domain (e.g., example.com)" class="input-field">
+                <select id="ruleTypeSelect" class="select-field">
+                    <option value="block">Blacklist (Block)</option>
+                    <option value="allow">Whitelist (Allow)</option>
+                </select>
+                <button id="addRuleBtn" class="btn">Add Rule</button>
+            </div>
+            <p class="form-help">Enter a domain to add it to your custom rules. Whitelist rules will override blacklist rules.</p>
+        </section>
+
+        <section class="card">
+            <h2>Your Whitelist</h2>
+            <ul id="whitelist" class="rule-list">
+                <!-- Whitelisted domains will be loaded here -->
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Your Blacklist</h2>
+            <ul id="blacklist" class="rule-list">
+                <!-- Blacklisted domains will be loaded here -->
+            </ul>
+        </section>
+    </div>
+    <script src="js/options.js"></script>
+</body>
+</html>

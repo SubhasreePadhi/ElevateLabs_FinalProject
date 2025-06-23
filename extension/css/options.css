@@ -1,0 +1,136 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #eef2f7;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 1.8em;
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.card {
+    background-color: #fcfdff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e9ef;
+}
+
+.card h2 {
+    font-size: 1.3em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-field, .select-field {
+    flex-grow: 1;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field:focus, .select-field:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+    outline: none;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: #1a73e8;
+    color: white;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #1565c0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.form-help {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.rule-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rule-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 0.95em;
+}
+
+.rule-list li:last-child {
+    border-bottom: none;
+}
+
+.rule-list li span {
+    flex-grow: 1;
+    color: #444;
+}
+
+.rule-list .remove-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.2s ease;
+}
+
+.rule-list .remove-btn:hover {
+    background-color: #d32f2f;
+}
