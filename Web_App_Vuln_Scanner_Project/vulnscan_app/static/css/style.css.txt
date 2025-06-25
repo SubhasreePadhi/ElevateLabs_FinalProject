@@ -1,0 +1,215 @@
+/* static/css/style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.scan-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f9fbfb;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+input[type="url"],
+input[type="number"] {
+    padding: 12px 15px;
+    border: 1px solid #ccddee;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="url"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.btn-scan {
+    padding: 14px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.btn-scan:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-scan:active {
+    transform: translateY(0);
+}
+
+.scanned-url {
+    color: #007bff;
+    word-break: break-all;
+    font-size: 0.9em;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 10px 18px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
+}
+
+.results-summary {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #e9f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #28a745;
+}
+
+.highlight-count {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.vulnerability-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.vulnerability-card.high { border-left: 5px solid #dc3545; }
+.vulnerability-card.medium { border-left: 5px solid #ffc107; }
+.vulnerability-card.low { border-left: 5px solid #17a2b8; }
+
+.vuln-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.vulnerability-card h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.3em;
+}
+
+.severity {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: white;
+}
+
+.severity-high { background-color: #dc3545; }
+.severity-medium { background-color: #ffc107; }
+.severity-low { background-color: #17a2b8; }
+
+.vulnerability-card p {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.vulnerability-card p strong {
+    color: #333;
+}
+
+.payload {
+    background-color: #e9ecef;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    color: #c7254e;
+}
+
+.no-results {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #e2f0f7;
+    border-radius: 8px;
+    border: 1px solid #bee5eb;
+    color: #007bff;
+}
+
+.no-results h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.alert.error {
+    border-left: 5px solid #dc3545;
+    background-color: #fceae9;
+}

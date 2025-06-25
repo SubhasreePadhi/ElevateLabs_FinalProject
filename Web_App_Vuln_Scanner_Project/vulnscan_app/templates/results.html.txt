@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VulnScan - Scan Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Scan Results for: <span class="scanned-url">{{ scanned_url }}</span></h1>
+        
+        <a href="{{ url_for('index') }}" class="btn-back">← Back to Scan</a>
+
+        {% if error %}
+        <div class="alert error">
+            <h3>Scan Error:</h3>
+            <p>{{ error }}</p>
+            <p>Please check the URL and try again. Ensure the target web application is accessible and you have permission to scan it.</p>
+        </div>
+        {% elif results %}
+            <div class="results-summary">
+                <p>Found <span class="highlight-count">{{ results | length }}</span> vulnerabilities.</p>
+            </div>
+            {% for vuln in results %}
+            <div class="vulnerability-card {{ vuln.severity | lower }}">
+                <div class="vuln-header">
+                    <h2>{{ vuln.type }}</h2>
+                    <span class="severity severity-{{ vuln.severity | lower }}">{{ vuln.severity }}</span>
+                </div>
+                <p><strong>URL:</strong> <a href="{{ vuln.url }}" target="_blank">{{ vuln.url }}</a></p>
+                <p><strong>Method:</strong> {{ vuln.method }}</p>
+                {% if vuln.payload and vuln.payload != 'N/A' %}
+                <p><strong>Payload:</strong> <code class="payload">{{ vuln.payload }}</code></p>
+                {% endif %}
+                <p><strong>Evidence:</strong> {{ vuln.evidence }}</p>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-results">
+                <h3>No vulnerabilities found on the scanned target.</h3>
+                <p>This does not guarantee the application is entirely secure. Manual review and more advanced tools are always recommended.</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
